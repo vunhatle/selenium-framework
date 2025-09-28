@@ -23,8 +23,9 @@ public class GoogleSteps {
     }
 
     @Given("Click on Platform menu")
-    public void clickOnPlatform() {
+    public void clickOnPlatform() throws InterruptedException {
         WebDriver driver = DriverUtils.getDriver();
+        Thread.sleep(1000);
         driver.findElement(By.xpath("//ul[@class='breakdance-menu-list']//a[contains(text(),'Platform')]")).click();
     }
 
