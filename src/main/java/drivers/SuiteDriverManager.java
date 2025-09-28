@@ -39,6 +39,7 @@ public class SuiteDriverManager {
                 System.out.println("Chrome starts: "+ LocalDateTime.now());
                 WebDriverManager.chromedriver().setup();
                 ChromeOptions chromeOptions = new ChromeOptions();
+                chromeOptions.setHeadless(false);
                 chromeOptions.addArguments("--remote-allow-origins=*");
                 return new ChromeDriver(chromeOptions);
 
@@ -46,6 +47,7 @@ public class SuiteDriverManager {
                 System.out.println("Firefox starts: "+ LocalDateTime.now());
                 WebDriverManager.firefoxdriver().setup();
                 FirefoxOptions firefoxOptions = new FirefoxOptions();
+                firefoxOptions.setHeadless(false);
                 return new FirefoxDriver(firefoxOptions);
 
             default:
