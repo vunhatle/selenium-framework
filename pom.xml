@@ -172,8 +172,8 @@
                 <version>3.2.5</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFile>src/test/chrome-suite.xml</suiteXmlFile>
-                        <suiteXmlFile>src/test/firefox-suite.xml</suiteXmlFile>
+                        <suiteXmlFile>src/test/resources/xmlfiles/chrome-suite.xml</suiteXmlFile>
+                        <suiteXmlFile>src/test/resources/xmlfiles/firefox-suite.xml</suiteXmlFile>
                     </suiteXmlFiles>
                     <forkCount>2</forkCount> <!-- mỗi suite chạy 1 JVM riêng -->
                     <reuseForks>false</reuseForks>
