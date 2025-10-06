@@ -170,14 +170,21 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.2.5</version>
-                <configuration>
+                <!--<configuration>
                     <suiteXmlFiles>
                         <suiteXmlFile>src/test/resources/xmlfiles/chrome-suite.xml</suiteXmlFile>
                         <suiteXmlFile>src/test/resources/xmlfiles/firefox-suite.xml</suiteXmlFile>
                     </suiteXmlFiles>
-                    <forkCount>2</forkCount> <!-- mỗi suite chạy 1 JVM riêng -->
+                    <forkCount>2</forkCount> &lt;!&ndash; mỗi suite chạy 1 JVM riêng &ndash;&gt;
                     <reuseForks>false</reuseForks>
-                    <parallel>none</parallel> <!-- tránh chạy song song trong cùng JVM -->
+                    <parallel>none</parallel> &lt;!&ndash; tránh chạy song song trong cùng JVM &ndash;&gt;
+                </configuration>-->
+                <configuration>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
+                    </suiteXmlFiles>
+                    <forkCount>1</forkCount>
+                    <reuseForks>false</reuseForks>
                 </configuration>
             </plugin>
 
