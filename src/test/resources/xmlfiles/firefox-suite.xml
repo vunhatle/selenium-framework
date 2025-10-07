@@ -3,6 +3,9 @@
     <listeners>
         <listener class-name="hooks.suitelistener.SuiteListener"/>
     </listeners>
+    <listeners>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+    </listeners>
 
     <test name="RunOnFirefox">
         <parameter name="browser" value="firefox"/>
