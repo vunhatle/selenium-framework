@@ -51,10 +51,7 @@ public class SuiteDriverManager {
                 WebDriverManager.firefoxdriver().setup();
                 FirefoxOptions firefoxOptions = new FirefoxOptions();
                 firefoxOptions.setHeadless(false);
-                firefoxOptions.addArguments("--disable-gpu");
-                firefoxOptions.addArguments("--no-sandbox");
-                firefoxOptions.addArguments("--window-size=1920,1080");
-                firefoxOptions.addArguments("--remote-allow-origins=*");
+                firefoxOptions.addArguments("--disable-gpu", "--no-sandbox", "--width=1920", "--height=1080");
                 return new FirefoxDriver(firefoxOptions);
 
             default:
