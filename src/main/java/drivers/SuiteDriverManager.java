@@ -40,6 +40,9 @@ public class SuiteDriverManager {
                 WebDriverManager.chromedriver().setup();
                 ChromeOptions chromeOptions = new ChromeOptions();
                 chromeOptions.setHeadless(false);
+                chromeOptions.addArguments("--disable-gpu");
+                chromeOptions.addArguments("--no-sandbox");
+                chromeOptions.addArguments("--window-size=1920,1080");
                 chromeOptions.addArguments("--remote-allow-origins=*");
                 return new ChromeDriver(chromeOptions);
 
@@ -48,6 +51,7 @@ public class SuiteDriverManager {
                 WebDriverManager.firefoxdriver().setup();
                 FirefoxOptions firefoxOptions = new FirefoxOptions();
                 firefoxOptions.setHeadless(false);
+                firefoxOptions.addArguments("--disable-gpu", "--no-sandbox", "--width=1920", "--height=1080");
                 return new FirefoxDriver(firefoxOptions);
 
             default:
