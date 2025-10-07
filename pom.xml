@@ -183,8 +183,14 @@
                     <suiteXmlFiles>
                         <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
                     </suiteXmlFiles>
-                    <forkCount>1</forkCount>
+                    <forkCount>0</forkCount>
                     <reuseForks>false</reuseForks>
+                    <properties>
+                        <property>
+                            <name>listener</name>
+                            <value>hooks.suitelistener.SuiteListener</value>
+                        </property>
+                    </properties>
                 </configuration>
             </plugin>
 

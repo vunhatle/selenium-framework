@@ -18,7 +18,7 @@ public class DriverUtils {
         return currentSuite.get();
     }
 
-    public static WebDriver getDriver() {
+    /*public static WebDriver getDriver() {
         String suiteName = currentSuite.get();
         if (suiteName == null) {
             throw new IllegalStateException("Suite name chưa được set! Hãy gọi setCurrentSuite() trước.");
@@ -32,7 +32,32 @@ public class DriverUtils {
             throw new IllegalStateException("Suite name chưa được set! Hãy gọi setCurrentSuite() trước.");
         }
         return SuiteDriverManager.getDriver(suiteName, browser);
+    }*/
+    public static WebDriver getDriver() {
+        String suiteName = currentSuite.get();
+        if (suiteName == null) {
+            suiteName = System.getProperty("currentSuite");
+            if (suiteName == null) {
+                throw new IllegalStateException("Suite name chưa được set! Hãy gọi setCurrentSuite() trước.");
+            }
+            // gán lại cho thread hiện tại để dùng về sau
+            currentSuite.set(suiteName);
+        }
+        return SuiteDriverManager.getDriver(suiteName);
     }
+
+    public static WebDriver getDriver(String browser) {
+        String suiteName = currentSuite.get();
+        if (suiteName == null) {
+            suiteName = System.getProperty("currentSuite");
+            if (suiteName == null) {
+                throw new IllegalStateException("Suite name chưa được set! Hãy gọi setCurrentSuite() trước.");
+            }
+            currentSuite.set(suiteName);
+        }
+        return SuiteDriverManager.getDriver(suiteName, browser);
+    }
+
 
     public static void quitDriver() {
         String suiteName = currentSuite.get();
