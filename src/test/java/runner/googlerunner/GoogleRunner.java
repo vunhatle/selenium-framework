@@ -10,7 +10,5 @@ import org.testng.annotations.Listeners;
         plugin = {"pretty", "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"}
 )
 @Listeners({hooks.suitelistener.SuiteListener.class})
-public class GoogleRunner extends AbstractTestNGCucumberTests {
-
-}
+public class GoogleRunner extends AbstractTestNGCucumberTests {}
 

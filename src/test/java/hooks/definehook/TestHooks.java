@@ -1,23 +1,19 @@
 /*
-package hooks;
-import config.ConfigManager;
+package hooks.definehook;
+
 import dbmanager.DbConnector;
 import dbmanager.DbSshConfig;
-import drivers.DriverFactory;
 import io.cucumber.java.*;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import utils.DBUtils;
 
-
 public class TestHooks {
     private static DbSshConfig cfg;
     private static DbConnector connector;
+
     */
 /*
         Cucumber annotations
@@ -27,23 +23,10 @@ public class TestHooks {
 
     @Before
     public void setUp() {
-        WebDriver webDriver;
-        String browser = System.getProperty("browser", "chrome");
-        switch (browser.toLowerCase()) {
-            case "firefox":
-                webDriver = new FirefoxDriver();
-                break;
-            case "chrome":
-            default:
-                webDriver = new ChromeDriver();
-                break;
-        }
-        DriverFactory.setDriver(webDriver);
     }
 
     @After
     public void tearDown() {
-        DriverFactory.removeDriver();
     }
 
     */
@@ -52,7 +35,6 @@ public class TestHooks {
         to log each step of scenarios
         to capture screenshot after each step
     *//*
-
 
     @BeforeStep
     public void beforeEachStep() {
@@ -72,7 +54,6 @@ public class TestHooks {
         to load config
         to start/stop server
     *//*
-
 
     @BeforeClass
     public static void beforeAllScenarios() {
@@ -94,7 +75,7 @@ public class TestHooks {
         cfg.dbName = "testsigma_opensource";
         cfg.dbUser = "root";
         cfg.dbPassword = "root123";
-        // Nếu không dùng SSH
+        // No SSH
         cfg.sshHost = null;
         cfg.maximumPoolSize = 10;
 
@@ -107,9 +88,6 @@ public class TestHooks {
     public void afterSuite() {
         DBUtils.stopWithDb(connector);
     }
-
-
-
 
 }
 */

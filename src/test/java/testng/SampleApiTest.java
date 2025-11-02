@@ -87,8 +87,6 @@ public class SampleApiTest {
                 new HttpHeaders(),
                 CommonBaseApi.maxRetry
         );
-
-        // jsonplaceholder sẽ trả 200 hoặc 204 tùy API, nên test soft 1 chút
         Assert.assertTrue(
                 response.getStatusCode() == 200 || response.getStatusCode() == 204,
                 "DELETE request failed"
