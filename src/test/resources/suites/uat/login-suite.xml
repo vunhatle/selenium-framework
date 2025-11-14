@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="ChromeSuite2" parallel="tests" thread-count="1">
+    <listeners>
+        <listener class-name="hooks.suitelistener.SuiteListener"/>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+    </listeners>
+
+    <test name="RunOnChrome2">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="runner.dev.loginrunner.LoginRunner"/>
+            <class name="runner.dev.googlerunner.GoogleRunner"/>
+        </classes>
+    </test>
+
+</suite>

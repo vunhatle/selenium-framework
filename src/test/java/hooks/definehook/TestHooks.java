@@ -1,14 +1,14 @@
 /*
 package hooks.definehook;
 
-import dbmanager.DbConnector;
-import dbmanager.DbSshConfig;
+import setup.dbmanager.DbConnector;
+import setup.dbmanager.DbSshConfig;
 import io.cucumber.java.*;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
-import utils.DBUtils;
+import utils.db.DBUtils;
 
 public class TestHooks {
     private static DbSshConfig cfg;

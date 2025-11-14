@@ -2,7 +2,7 @@ package hooks.suitelistener;
 
 import org.testng.ISuite;
 import org.testng.ISuiteListener;
-import utils.DriverUtils;
+import setup.drivers.DriverUtils;
 
 public class SuiteListener implements ISuiteListener {
 

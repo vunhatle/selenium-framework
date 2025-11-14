@@ -244,7 +244,7 @@
                         <artifactId>maven-surefire-plugin</artifactId>
                         <configuration>
                             <suiteXmlFiles>
-                                <suiteXmlFile>src/test/resources/suites/chrome-suite.xml</suiteXmlFile>
+                                <suiteXmlFile>src/test/resources/suites/uat/chrome-suite.xml</suiteXmlFile>
                             </suiteXmlFiles>
                         </configuration>
                     </plugin>
@@ -261,7 +261,7 @@
                         <artifactId>maven-surefire-plugin</artifactId>
                         <configuration>
                             <suiteXmlFiles>
-                                <suiteXmlFile>src/test/resources/suites/firefox-suite.xml</suiteXmlFile>
+                                <suiteXmlFile>src/test/resources/suites/uat/firefox-suite.xml</suiteXmlFile>
                             </suiteXmlFiles>
                         </configuration>
                     </plugin>
@@ -278,7 +278,7 @@
                         <artifactId>maven-surefire-plugin</artifactId>
                         <configuration>
                             <suiteXmlFiles>
-                                <suiteXmlFile>src/test/resources/suites/login-suite.xml</suiteXmlFile>
+                                <suiteXmlFile>src/test/resources/suites/uat/login-suite.xml</suiteXmlFile>
                             </suiteXmlFiles>
                         </configuration>
                     </plugin>
