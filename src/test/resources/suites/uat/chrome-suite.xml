@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="ChromeSuite" parallel="tests" thread-count="1">
+    <listeners>
+        <listener class-name="hooks.suitelistener.SuiteListener"/>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+    </listeners>
+
+    <test name="RunOnChrome">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="runner.dev.googlerunner.GoogleRunner"/>
+        </classes>
+    </test>
+
+</suite>

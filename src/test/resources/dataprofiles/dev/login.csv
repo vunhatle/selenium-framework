@@ -1,0 +1,4 @@
+username,password,message
+user1,pass1,Login success
+user2,wrongpass,Invalid credentials
+user3,pass3,User locked

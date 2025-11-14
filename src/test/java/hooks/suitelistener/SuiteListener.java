@@ -2,7 +2,7 @@ package hooks.suitelistener;
 
 import org.testng.ISuite;
 import org.testng.ISuiteListener;
-import utils.DriverUtils;
+import setup.drivers.DriverUtils;
 
 public class SuiteListener implements ISuiteListener {
 
@@ -23,12 +23,8 @@ public class SuiteListener implements ISuiteListener {
             System.err.println("⚠️ Không lấy được browser từ suite XML: " + e.getMessage());
         }
 
-        // 👉 Gán suiteName cho ThreadLocal
         DriverUtils.setCurrentSuite(suiteName);
-
-        // 👉 Gán thêm cho System property để thread khác (như Cucumber) có thể đọc được
         System.setProperty("currentSuite", suiteName);
-        // ✅ Tạo driver sớm cho suite này
         DriverUtils.getDriver(browser);
         System.out.println(">>> SuiteListener setCurrentSuite: " + suiteName + " with browser: " + browser);
     }
